@@ -28,13 +28,15 @@ class _RecentCallsState extends State<RecentCalls> {
           statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
           statusBarBrightness: Brightness.light, // For iOS (dark icons)
         ),
-
+        elevation: 1,
       ),
       body: ListView.separated(
         itemBuilder: (_, int index) => const CallCard(),
         separatorBuilder: (_, int index) => const Padding(
           padding: EdgeInsets.only(left: 42),
-          child: Divider(thickness: 0.5, height: 0.5),
+          child: Divider(
+              thickness: 0.5,
+              height: 0.5),
         ),
         itemCount: 300,
         physics: const BouncingScrollPhysics(),
