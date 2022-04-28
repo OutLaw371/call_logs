@@ -1,15 +1,27 @@
+
+
 import 'package:call_logs/recent_calls/call_info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:call_logs/recent_calls/recent_calls_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+ await initialization(null);
+
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+Future initialization(BuildContext? context) async {
+  await Future.delayed(const Duration(seconds: 3));
+}
 
-  // This widget is the root of your application.
+
+class MyApp extends StatelessWidget {
+  static const title = 'Native Splash Screen';
+
+  // MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
