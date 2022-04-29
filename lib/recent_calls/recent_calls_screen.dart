@@ -1,3 +1,4 @@
+import 'package:call_logs/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:call_logs/recent_calls/call_item.dart';
 import 'package:flutter/services.dart';
@@ -18,11 +19,11 @@ class _RecentCallsState extends State<RecentCalls> {
           'Журнал звонков',
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: const Color(0xffF9F9FB),
+        backgroundColor: AppColor.appBar,
 
         systemOverlayStyle: const SystemUiOverlayStyle(
           // Status bar color
-          statusBarColor: Color(0xffF9F9FB),
+          statusBarColor: AppColor.appBar,
 
           // Status bar brightness (optional)
           statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
