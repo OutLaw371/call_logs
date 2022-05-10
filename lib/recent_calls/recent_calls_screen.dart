@@ -37,7 +37,8 @@ class _RecentCallsState extends State<RecentCalls> {
           padding: EdgeInsets.only(left: 42),
           child: Divider(
               thickness: 0.5,
-              height: 0.5),
+              height: 0.5,
+              color: AppColor.tertiary),
         ),
         itemCount: 300,
         physics: const BouncingScrollPhysics(),
